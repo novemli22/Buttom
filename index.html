@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Download CV</title>
   <style>
+    /* Body full height & center */
     body {
-      font-family: sans-serif;
-      background: #fff;
+      margin: 0;
+      min-height: 100vh;
       display: flex;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
+      align-items: center;
+      background: transparent; /* transparan */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+
+    /* Button styling */
     a.download-btn {
-      background-color: #111827;
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      font-size: 1.25rem;
+      font-weight: 600;
       color: #fff;
-      padding: 12px 24px;
-      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.7); /* semi transparan */
+      border-radius: 12px;
       text-decoration: none;
-      font-size: 18px;
+      transition: background-color 0.3s ease;
+      max-width: 90vw;
+      text-align: center;
+      box-sizing: border-box;
     }
+
     a.download-btn:hover {
-      background-color: #374151;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    /* Responsive font size (optional) */
+    @media (max-width: 600px) {
+      a.download-btn {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
-  <a class="download-btn" href="https://drive.google.com/drive/folders/1ycl-wFsSgZJ0AeEZhHTooEu97xPH7iO6?usp=drive_link">
-    Download CV
-  </a>
+  <a
+    class="download-btn"
+    href="https://drive.google.com/uc?export=download&id=YOUR_FILE_ID"
+    download
+    >Download CV</a
+  >
 </body>
 </html>
